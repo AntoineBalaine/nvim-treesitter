@@ -1,14 +1,15 @@
 [ (COMMENT) 
   (annotation) 
  (reference_number_line)
+(grace_note)
  ]@comment  ; line and block comments
 (stylesheet_directives) @preproc
 [(body_info_line)(file_header_info_line)(tune_header_info_line)(body_inline_info)] @define   ; preprocessor definition directives
 ; ; @operator ; symbolic operators (e.g. `+` / `*`)
 (generic_bar_line) @punctuation.delimiter ; delimiters (e.g. `;` / `.` / `,`)
-[(open_chord)(close_chord)]@punctuation.bracket   ; brackets (e.g. `()` / `{}` / `[]`)
+[(open_chord)(close_chord) ]@punctuation.bracket   ; brackets (e.g. `()` / `{}` / `[]`)
 ; ; @punctuation.special   ; special symbols (e.g. `{}` in string interpolation)
-[(alteration)(octave)(rhythm)] @string            ; string literals
+[(alteration)(octave)(rhythm)(tuplet_marker)] @string            ; string literals
 ; ; @string.regex      ; regular expressions
 ; ; @string.escape     ; escape sequences
 ; ; @string.special    ; other special strings (e.g. dates)
